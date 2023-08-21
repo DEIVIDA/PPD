@@ -18,7 +18,7 @@ while True:
         if not istraukimas_produktas in saldytuvas.keys():
             print("produkto nera")
         else:
-            istraukimas_kiekis = int(input("pasirinkite kieki: "))
+            istraukimas_kiekis = float(input("pasirinkite kieki: "))
             if istraukimas_produktas in saldytuvas.keys() and saldytuvas[istraukimas_produktas] < istraukimas_kiekis:
                 print("tiek daug produkto nera")
             if istraukimas_produktas in saldytuvas.keys() and saldytuvas[istraukimas_produktas] >= istraukimas_kiekis:
