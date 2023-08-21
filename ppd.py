@@ -16,8 +16,10 @@ while True:
             print("{} ({})".format(daiktas, kiekis))
         pass
     elif pasirinkimas == "5": # Ruslanas
-        produktai = input('produkto paieska')
-        while produktai = True:
+        produktai = input('produkto paieška: ')
+        while produktai in saldytuvas:
             print('produktas yra saldytuve')
+            break
         else:
             print('produkto nera saldytuve')
+            break
