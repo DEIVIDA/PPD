@@ -149,5 +149,3 @@ while True:
             print("Tokio produkto nėra.")
             print("\n")
         pass
-    
-dasdas
