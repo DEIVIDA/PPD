@@ -3,8 +3,11 @@ while True:
     pasirinkimas = input("pasirinkit:")
     if pasirinkimas == "0":
         break
-    
+       
     elif pasirinkimas == "1": # Deivida
+        produktas = input('Įveskite produktą: ')
+        kiekis=input('Įveskite kiekį: ')
+        saldytuvas[produktas]=kiekis
         pass
     elif pasirinkimas == "2": # Gabrielius
         pass
