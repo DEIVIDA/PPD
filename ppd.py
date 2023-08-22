@@ -1,16 +1,16 @@
-#1 
+#1 Ruslanas
 def prideti():
     pass
-#2
+#2 Ruslanas
 def papildyti():
     pass
-#3
+#3 Gabrielius
 def skaiciuoti_turinio_svori():
     pass
-#4
+#4 Giedrius
 def ar_iseina():
     pass
-#5
+#5 Mindaugas
 def turinys():
     pass
 
