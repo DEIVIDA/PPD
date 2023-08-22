@@ -1,7 +1,7 @@
 #1 Ruslanas
 def prideti():
     pass
-#2 Ruslanas
+#2 Deividai
 def papildyti():
     pass
 #3 Gabrielius
@@ -11,10 +11,13 @@ def skaiciuoti_turinio_svori():
 def ar_iseina():
     pass
 #5 Mindaugas
-def turinys():
-    pass
+def turinys(saldytuvas):
+    print("Šaldytuve yra:")
+    for daiktas, kiekis in saldytuvas.items():
+        print("{} :{}".format(daiktas, kiekis))
+    
 
-saldytuvas = {"slyvos": 3, "bananai" :5, "pasikorusi ziurke": 0.5, "kiausiniai": 7, }
+saldytuvas = {"slyvos":3,"bananai":5,"pasikorusi ziurke":0.5,"kiausiniai":7,"pienas":2,"vanduo":4,"keciupas":1.2}
 while True:
     pasirinkimas = input("0 - išeiti iš šaldytuvo\n1 - pridėti naują produktą\n2 - papildyti produkto kiekį\n3 - ištraukti produktą\n4 - peržiūrėti produktus\n5 - ieškoti produktų\n  pasirinkite:")
     if pasirinkimas == "0":
@@ -42,9 +45,7 @@ while True:
             if saldytuvas[istraukimas_produktas] == 0:
                 saldytuvas.pop(istraukimas_produktas)                 
     elif pasirinkimas == "4": # Mindaugas
-        print("Šaldytuve yra:")
-        for daiktas, kiekis in saldytuvas.items():
-            print("{} ({})".format(daiktas, kiekis))
+        print(f"Šaldytuve yra: {turinys(saldytuvas)}")
     elif pasirinkimas == "5": # Ruslanas
         produktai = input('produkto paieška: ')
         if produktai in saldytuvas:
