@@ -1,6 +1,10 @@
 #1 Ruslanas
-def prideti():
-    pass
+def prideti(saldytuvas):
+    produktas = input('iveskite produkta, kuri norite prideti')
+    kiekis = float(input('iveskite produkto kieki'))
+    saldytuvas[produktas] = kiekis
+    return saldytuvas
+    
 #2 Deividai
 def papildyti():
     pass
