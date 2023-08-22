@@ -1,10 +1,12 @@
 #1 Ruslanas
 def prideti(saldytuvas):
-    produktas = input('iveskite produkta, kuri norite prideti')
-    kiekis = float(input('iveskite produkto kieki'))
+    produktas = input('iveskite produkta, kuri norite prideti: ')
+    kiekis = float(input('iveskite produkto kieki: '))
     saldytuvas[produktas] = kiekis
+    print(f'produktas {produktas}: {kiekis} sekmingai pridetas' '\n')
     return saldytuvas
-    
+
+
 #2 Deividai
 def papildyti():
     pass
@@ -16,20 +18,18 @@ def ar_iseina():
     pass
 #5 Mindaugas
 def turinys(saldytuvas):
-    print("Šaldytuve yra:")
     for daiktas, kiekis in saldytuvas.items():
         print("{} :{}".format(daiktas, kiekis))
     
 
 saldytuvas = {"slyvos":3,"bananai":5,"pasikorusi ziurke":0.5,"kiausiniai":7,"pienas":2,"vanduo":4,"keciupas":1.2}
 while True:
-    pasirinkimas = input("0 - išeiti iš šaldytuvo\n1 - pridėti naują produktą\n2 - papildyti produkto kiekį\n3 - ištraukti produktą\n4 - peržiūrėti produktus\n5 - ieškoti produktų\n  pasirinkite:")
+    pasirinkimas = input("0 - išeiti iš šaldytuvo\n1 - pridėti naują produktą\n2 - papildyti produkto kiekį\n3 - ištraukti produktą\n4 - peržiūrėti produktus\n5 - ieškoti produktų\n  pasirinkite: ")
+    print('\n')
     if pasirinkimas == "0":
         break      
     elif pasirinkimas == "1": # Deivida
-        produktas = input('Įveskite produktą: ')
-        kiekis = float(input('Įveskite kiekį: '))
-        saldytuvas[produktas]=kiekis
+        prideti(saldytuvas)
     elif pasirinkimas == "2": # Gabrielius
         print(saldytuvas)
         pildomas_produktas = input("Įveskite, kurį produktą norite papildyti: ")
