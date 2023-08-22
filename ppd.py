@@ -8,11 +8,23 @@ def papildyti():
 def skaiciuoti_turinio_svori():
     pass
 #4 Giedrius
-def ar_iseina():
-    pass
+def ar_iseina(saldytuvas):
+    receptas = {}
+    ivedimas = input("IVESKITE: ")
+    def print_receptas(receptas):
+        print("Receptas:")
+        for ingredientas, kiekis in receptas.items():
+        print(f"{ingredientas}: {kiekis}")
+    ingridientu_sarasas = ivedimas.split(",")
+    for ingredientas in ingridientu_sarasas:
+        ingredientas1, kiekis = ingredientas.split(":")
+        receptas[ingredientas1.strip()] = kiekis 
+    return receptas
+    print(print_receptas)
+
+    
 #5 Mindaugas
 def turinys(saldytuvas):
-    print("Šaldytuve yra:")
     for daiktas, kiekis in saldytuvas.items():
         print("{} :{}".format(daiktas, kiekis))
     
@@ -52,3 +64,5 @@ while True:
             print(f'{produktai} yra: {saldytuvas[produktai]}')
         else:
             print('produkto nera saldytuve')
+    elif pasirinkimas == "7":
+        ar_iseina(saldytuvas)
