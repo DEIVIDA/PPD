@@ -2,8 +2,13 @@
 def prideti():
     pass
 #2 Deividai
-def papildyti():
-    pass
+def papildyti(saldytuvas):
+    produktas = input('Įveskite produktą kurį norite papildyti: ')
+    kiekis = float(input('Įveskite produkto kiekį: '))
+    if produktas in saldytuvas:
+        saldytuvas[produktas] += kiekis
+    else:
+        saldytuvas[produktas] = kiekis
 #3 Gabrielius
 def skaiciuoti_turinio_svori():
     pass
@@ -27,11 +32,7 @@ while True:
         kiekis = float(input('Įveskite kiekį: '))
         saldytuvas[produktas]=kiekis
     elif pasirinkimas == "2": # Gabrielius
-        print(saldytuvas)
-        pildomas_produktas = input("Įveskite, kurį produktą norite papildyti: ")
-        kiek_pildysim = float(input("Įveskite kiekį, kurį norite papildyti:"))
-        saldytuvas[pildomas_produktas] += kiek_pildysim
-        print((saldytuvas)[pildomas_produktas])
+        papildyti(saldytuvas)
     elif pasirinkimas == "3": # Giedrius - istraukti produkta
         istraukimas_produktas = input("pasirinkite produkta: ")
         if not istraukimas_produktas in saldytuvas.keys():
