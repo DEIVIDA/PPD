@@ -1,7 +1,22 @@
+#1 
+def prideti():
+    pass
+#2
+def papildyti():
+    pass
+#3
+def skaiciuoti_turinio_svori():
+    pass
+#4
+def ar_iseina():
+    pass
+#5
+def turinys():
+    pass
+
 saldytuvas = {"slyvos": 3, "bananai" :5, "pasikorusi ziurke": 0.5, "kiausiniai": 7, }
 while True:
-    pasirinkimas = input("Pasirinkite: ")
-    print("\n")
+    pasirinkimas = input("0 - išeiti iš šaldytuvo\n1 - pridėti naują produktą\n2 - papildyti produkto kiekį\n3 - ištraukti produktą\n4 - peržiūrėti produktus\n5 - ieškoti produktų\n  pasirinkite:")
     if pasirinkimas == "0":
         break      
     elif pasirinkimas == "1": # Deivida
