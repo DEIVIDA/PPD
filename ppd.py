@@ -76,13 +76,16 @@ def turinys(saldytuvas):
 saldytuvas = {"slyvos":3,"bananai":5,"pasikorusi ziurke":0.5,"kiausiniai":7,"pienas":2,"vanduo":4,"keciupas":1.2}
 while True:
     pasirinkimas = input("0 - išeiti iš šaldytuvo\n1 - pridėti naują produktą\n2 - papildyti produkto kiekį\n3 - ištraukti produktą\n4 - peržiūrėti produktus\n5 - ieškoti produktų\n6 - skaiciuoti saldytuvo bendra svori\npasirinkite:")
-    print("\n")
     if pasirinkimas == "0":
         break
     elif pasirinkimas == "1": # Deivida
         prideti(saldytuvas)
     elif pasirinkimas == "2": # Gabrielius
-        papildyti(saldytuvas)
+        print(saldytuvas)
+        pildomas_produktas = input("Įveskite, kurį produktą norite papildyti: ")
+        kiek_pildysim = float(input("Įveskite kiekį, kurį norite papildyti:"))
+        saldytuvas[pildomas_produktas] += kiek_pildysim
+        print((saldytuvas)[pildomas_produktas])
     elif pasirinkimas == "3": # Giedrius - istraukti produkta
         istraukimas_produktas = input("pasirinkite produkta: ")
         if not istraukimas_produktas in saldytuvas.keys():
