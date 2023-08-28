@@ -74,8 +74,12 @@ class Saldytuvas:
         return grizo
 
     def atidaryti(self):
-        with open("saldytuvo_turinys.json", "r", encoding="utf-8") as saldytuvo_turinys:
-            self.saldytuvas = json.load(saldytuvo_turinys)    
+        try:
+            with open("saldytuvo_turinys.json", "r", encoding="utf-8") as saldytuvo_turinys:
+                self.saldytuvas = json.load(saldytuvo_turinys)
+        except FileNotFoundError:
+            self.saldytuvas = {}
+                
 
     def uzdaryti(self):
         with open("saldytuvo_turinys.json", "w", encoding="utf-8") as saldytuvo_turinys:
